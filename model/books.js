@@ -15,17 +15,17 @@ mongoose
   });
 
 const bookSchema = new mongoose.Schema({
-  name: {
+  author: {
     type: String,
     required: true,
-    minLength: 5,
+    minLength: 3,
   },
-  content: {
+  title: {
     type: String,
     required: true,
   },
-  price: {
-    type: Number,
+  genre: {
+    type: String,
     required: true,
   },
 });

@@ -36,9 +36,9 @@ describe('Book Store API', () => {
 
   test('can successfully add a book', async () => {
     const dataToSend = {
-      name: 'Stranger Things',
-      content: 'Eleven is the strongest',
-      price: 1500,
+      author: 'Eleven Doery',
+      title: 'Eleven is the strongest in Stranger things',
+      genre: 'action',
     };
     // Get the data from the DB (Database) before making req
     const booksBeforeReq = await dataInDB();
@@ -46,27 +46,28 @@ describe('Book Store API', () => {
     // Get the data from the DB (Database) after making req
     const booksAfterReq = await dataInDB();
 
-    const bookNames = booksAfterReq.map((item) => item.name);
-    strictEqual(req.body.name, dataToSend.name);
+    const bookAuthors = booksAfterReq.map((item) => item.author);
+    strictEqual(req.body.author, dataToSend.author);
     strictEqual(booksAfterReq.length, initialDataLength + 1);
-    strictEqual(bookNames.includes(dataToSend.name), true);
+    strictEqual(bookAuthors.includes(dataToSend.author), true);
   });
 
   test('can successfully update a specific book', async () => {
     const booksBeforeReq = await dataInDB();
     const dataToUpdate = booksBeforeReq[0];
     const dataToUpdateWith = {
-      name: 'Anime',
-      content: 'Anime is the best',
-      price: 1000000,
+      author: 'Light Yagami',
+      title: 'Anime is the best',
+      genre: 'anime',
     };
+
     const req = await api
       .put(`${rootRoute}/${dataToUpdate.id}`)
       .send(dataToUpdateWith)
       .expect(200);
 
     const booksAfterReq = await dataInDB();
-    strictEqual(dataToUpdateWith.name, req.body.name);
+    strictEqual(dataToUpdateWith.author, req.body.author);
     deepStrictEqual(getDataWithoutId(booksAfterReq)[0], dataToUpdateWith);
   });
 
@@ -77,10 +78,10 @@ describe('Book Store API', () => {
     const req = await api.delete(`${rootRoute}/${dataToDelete.id}`).expect(204);
     const booksAfterReq = await dataInDB();
 
-    const bookNames = booksAfterReq.map((item) => item.name);
+    const bookAuthors = booksAfterReq.map((item) => item.author);
 
     strictEqual(booksAfterReq.length, initialDataLength - 1);
-    strictEqual(bookNames.includes(dataToDelete.name), false);
+    strictEqual(bookAuthors.includes(dataToDelete.author), false);
   });
 
   afterEach(async () => {

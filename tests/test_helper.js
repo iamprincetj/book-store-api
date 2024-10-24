@@ -2,14 +2,14 @@ const Book = require('../model/books');
 
 const initialData = [
   {
-    name: 'book name is this',
-    content: 'alway do this',
-    price: 200,
+    author: 'John Smith',
+    title: 'alway do this',
+    genre: 'motivational',
   },
   {
-    name: 'Peaky Blinders',
-    content: 'alway do this',
-    price: 100,
+    author: 'Peaky Blinders',
+    title: 'do not do this and that',
+    genre: 'crime',
   },
 ];
 

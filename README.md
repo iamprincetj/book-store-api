@@ -83,9 +83,9 @@ This is a solution for Hack51 backend bookstore challenge
 ```js
 
     {
-        "name": "American Pie",
-        "content": "A Very funny movie",
-        "price": 20000
+        "author": "Jerry Mcguire",
+        "title": "American Pie",
+        "genre": "comedy"
     }
 
 ```
@@ -103,9 +103,9 @@ This is a solution for Hack51 backend bookstore challenge
 ```js
 
     {
-        "name": "American Pie",
-        "content": "A Very funny movie",
-        "price": 20000
+        "author": "Jame nobfly",
+        "title": "Your Lie in April",
+        "genre": "anime"
     }
 
 ```
