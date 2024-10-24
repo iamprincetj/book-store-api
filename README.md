@@ -40,9 +40,21 @@ This is a solution for Hack51 backend bookstore challenge
 
 # Requirements
 
+- First git clone the repository
+
+  -
+
+  ```
+      git clone https://github.com/iamprincetj/book-store-api.git
+  ```
+
 - Install dependencies
 
-  - npm install
+  -
+
+  ```
+  npm install
+  ```
 
 - Make sure you have a MongoDB server locally
 
