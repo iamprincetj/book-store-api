@@ -7,11 +7,11 @@ This is a solution for Hack51 backend bookstore challenge
 - [Overview](#overview)
   - [Challenge](#challenge)
   - [Endpoints](#endpounts)
-- [My Process](#myprocess)
-  - [Built With](#builtwith)
+- [My Process](#my-process)
+  - [Built With](#built-with)
   - [Requirements](#requirements)
   - [Test](#test)
-- [API ENDPOINT EXAMPLE](#api-endpoint-examples)
+- [API ENDPOINT EXAMPLES](#api-endpoint-examples)
 - [Author](#author)
 
 # Overview
